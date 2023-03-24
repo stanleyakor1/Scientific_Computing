@@ -1,7 +1,0 @@
-\babel@toc {english}{}
-\contentsline {section}{\numberline {1}Africa countries}{1}{section.1}% 
-\contentsline {subsection}{\numberline {1.1}List of West and East Africa countries}{1}{subsection.1.1}% 
-\contentsline {subsection}{\numberline {1.2}Table of West and East Africa countries}{1}{subsection.1.2}% 
-\contentsline {section}{\numberline {2}Even, Odd and sign}{1}{section.2}% 
-\contentsline {section}{\numberline {3}aims pictures}{2}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}related equations}{2}{subsection.3.1}% 

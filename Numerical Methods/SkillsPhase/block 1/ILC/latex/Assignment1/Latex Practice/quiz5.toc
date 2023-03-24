@@ -1,4 +1,0 @@
-\contentsline {section}{\numberline {1}African Countries}{2}{section.1}% 
-\contentsline {subsection}{\numberline {1.1}List of West african countries}{2}{subsection.1.1}% 
-\contentsline {subsection}{\numberline {1.2}Table of west and east african countries}{2}{subsection.1.2}% 
-\contentsline {section}{\numberline {2}Even, Odd and sign}{2}{section.2}% 
