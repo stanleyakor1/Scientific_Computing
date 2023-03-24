@@ -1,0 +1,35 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proof}[theorem]{proof}
+\author{Stanley}
+\title{mps}
+\begin{document}
+\maketitle
+
+\section{theorem}
+\section{Theorem}
+\begin{theorem}
+For any triangulated polygon, we can assign three colours to the vertex, so that all the vertex of any polygon may be expressed in three colours
+\end{theorem}
+
+\begin{proof} 
+\end{proof}
+Base Case: \\
+Considering the very trivial case of a simple polygon [that is a triangle] where $n=3$, we actually see that for each vertex we can assign a different colour.\\
+\\
+The colouratiaon principle  can then be  extended for larger polygons $n=4,5,.........,k$ and this holds true as shown in the figure below.
+
+
+
+
+\section{Conclusion}
+The minimum number of guards required by brian to secure the entire perimeter of his farm is 7 as indicated by the red colours of the 24-sided polygons. 
+
+The number of guards required to cover any n-gon shaped field is proportional to the number of sides of the polygon, the solution is found by taking the floor of $\frac{n}{3}$ where $n$ is the number of sides of the n-gon, however this value is not often the minimum number of guards required.
+
+
+\end{document}

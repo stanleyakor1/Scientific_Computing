@@ -1,0 +1,371 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Template for AIMS Rwanda Assignments         %%%              %%%
+%%% Author:   AIMS Rwanda tutors                             %%%   ###        %%%
+%%% Email: tutors2017-18@aims.ac.rw                               %%%   ###        %%%
+%%% Copyright: This template was designed to be used for    %%% #######      %%%
+%%% the assignments at AIMS Rwanda during the academic year %%%   ###        %%%
+%%% 2017-2018.                                              %%%   #########  %%%
+%%% You are free to alter any part of this document for     %%%   ###   ###  %%%
+%%% yourself and for distribution.                          %%%   ###   ###  %%%
+%%%                                                         %%%              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%% Ensure that you do not write the questions before each of the solutions because it is not necessary. %%%%%% 
+
+\documentclass[12pt,a4paper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% packages %%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{psfrag}
+
+%%%%%%%%%%%%%%%%%%%%% students data %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\student}{Akor stanley}
+\newcommand{\course}{ODE }
+\newcommand{\assignment}{2}
+
+%%%%%%%%%%%%%%%%%%% using theorem style %%%%%%%%%%%%%%%%%%%%
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{exa}[thm]{Example}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{quest}{Question}[section]
+
+%%%%%%%%%%%%%%  Shortcut for usual set of numbers  %%%%%%%%%%%
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%% title page %%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\begin{center}
+\textbf{AFRICAN INSTITUTE FOR MATHEMATICAL SCIENCES \\[0.5cm]
+(AIMS RWANDA, KIGALI)}
+\vspace{1.0cm}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%% assignment information %%%%%%%%%%%%%%%%
+\noindent
+\rule{17cm}{0.2cm}\\[0.3cm]
+Name: \student \hfill Assignment Number: \assignment\\[0.1cm]
+Course: \course \hfill Date: \today\\
+\rule{17cm}{0.05cm}
+\vspace{1.0cm}
+
+
+
+
+\section*{Question 1}
+\begin{itemize}
+\item[(i)]
+$\frac{dx}{dt}=|x|^{\frac{1}{2}}$\\
+Case 1:$-x^{\frac{1}{2}}$\\
+Case 2:$x^{\frac{1}{2}}$
+\begin{align*}
+\frac{dx}{dt}= -x^{\frac{1}{2}}
+\end{align*}
+
+Applying seperation of variables techniques,
+
+\begin{align*}
+\frac{dx}{-x^{\frac{1}{2}}}&=dt\\
+\int -x^{\frac{1}{2}} dx&=dt\\
+\int -x^{\frac{1}{2}}dx&=t+c\\
+x&=\sqrt{\frac{-t}{2}+c}
+\end{align*}
+Taking similar steps for case 2, we shall obtain the second solution as;
+$x=\sqrt{\frac{t}{2}+c}$
+
+\item[(ii)]
+\begin{align*}
+x\frac{dx}{dt}&=t\\
+xdx&=tdt\\
+\int xdx&=\int tdt\\
+\frac{{x^{2}}}{2}&=\frac{t^{2}}{2}+c\\
+x&=\pm \sqrt{t^{2}+c}
+\end{align*}
+
+\item[(2)]
+\begin{itemize}
+\item[(i)] 
+If a function $f(z)$ and its partial derivatives are continuous in domain of $z$, $i.e$ the function is defined, then the hypothesis of Picard-Lindelof's theorem are satisfied \\
+\begin{align*}
+\frac{dx}{dt}=|x|^{\frac{1}{2}}
+\end{align*}
+Taking partial derivative of this fuction with respect to $x$ yields;\\
+
+\begin{align*}
+\frac{\partial f(x,t)}{\partial t}=\frac{1}{2\sqrt{x}}
+\end{align*}
+The result is not continuous for $x=0$, hence the hypothesis of Picard-Lindelof's theorem are not satisfied
+
+\item[(ii)]
+\begin{align*}
+x\frac{dx}{dt}&=t\\
+x^{'}=\frac{t}{x}
+\end{align*}
+The function is not continuous at $x=0$, hence the hypothesis of the Picard-Lindelof theorem are not satisfied.
+\end{itemize}
+
+\section*{Question 2}
+$\frac{du}{dt}=Au$ \quad \quad$u\left(0\right)=u_{0}$
+\begin{itemize}
+\item[(i)]
+\begin{equation*}
+A = 
+\begin{pmatrix}
+-5 & -4 & 2 \\
+-2 & -2 & 2 \\
+4 & 2 & 2
+\end{pmatrix}
+\end{equation*}
+
+\begin{equation*}
+A = 
+\begin{pmatrix}
+-5-\lambda & -4 & 2 \\
+-2 & -2-\lambda & 2 \\
+4 & 2 & 2-\lambda
+\end{pmatrix}
+\end{equation*}
+\[
+\left(-5-\lambda\right)
+\begin{bmatrix}
+    -2-\lambda  &  2     \\
+    2  &  2-\lambda      
+\end{bmatrix} 
++4
+\begin{bmatrix}
+    -2  &  -4      \\
+    4 &  2      
+\end{bmatrix} 
++2
+\begin{bmatrix}
+    -2  &  -2-\lambda      \\
+    4 &  2      
+\end{bmatrix} 
+\]
+
+$\left((-5-\lambda\right)[\left(-2-\lambda\right)\left(-2-\lambda\right)-4]+4[-2\left(2\right)-\left(4\right)\left(-4\right)]+2[-2\left(2\right)-\left(4\right)\left(-2-\lambda\right)]$\\
+$$\left(-5-\lambda\right)\left(\lambda^{2}-8\right)+4\left(-4+16\right)+2\left(-4+8+4\lambda\right)$$
+$$-\lambda^{3}-5\lambda^{2}+24\lambda=0$$
+$$\left(\lambda^{2}+5\lambda-24\right)-\lambda=0$$
+$$\lambda_{1}=0 \quad \lambda_{2}=-8 \quad \lambda_{3}=3$$
+
+The eigen vectors attributed to $\lambda_{1}=0 $ can be obtained as follows;\\
+
+\[
+\begin{pmatrix} -5 & -4 & 2 \\ -2 & -2 & 2\\4 &2 &2 \end{pmatrix} \begin{pmatrix} x \\ y \\z \end{pmatrix}=\begin{pmatrix} 0 \\ 0 \\0 \end{pmatrix}
+\]
+\begin{align}
+-5x-4y+2z=0\\
+-2x-2y+2z=0\\
+4x+2y+2z=0
+\end{align}
+Resolving equations(1),(2)and (3) simultaneously, we shall obtain the associated eigen vectors.\\
+\begin{align*}
+\lambda_{1}=0\quad \quad u_{1}=
+\begin{pmatrix} -2 \\ 3 \\1 \end{pmatrix}
+\end{align*}
+
+Similarly we can obtain the eigen vectors for the eigen value $\lambda_{2}=3$.\\
+\[
+\begin{pmatrix} -5-\left(3\right) & -4 & 2 \\ -2 & -2-\left(3\right) & 2\\4 &2 &2-\left(3\right) \end{pmatrix} \begin{pmatrix} x \\ y \\z \end{pmatrix}=\begin{pmatrix} 0 \\ 0 \\0 \end{pmatrix}\]\\
+\[
+\begin{pmatrix} -8 & -4 & 2 \\ -2 & -5 & 2\\4 &-1 &10 \end{pmatrix} \begin{pmatrix} x \\ y \\z \end{pmatrix}=\begin{pmatrix} 0 \\ 0 \\0 \end{pmatrix}
+\]\\
+\begin{align}
+-8x-4y+2z=0\\
+-2x-5y+2z=0\\
+4x+2y+-z=0
+\end{align}
+Resolving equations(4),(5)and (6) simultaneously, we shall obtain the associated eigen vectors.\\
+\begin{align*}
+\lambda_{2}=3\quad \quad u_{2}=
+\begin{pmatrix} 1 \\ 6 \\16 \end{pmatrix}
+\end{align*}
+
+Similarly we can obtain the eigen vectors for the eigen value $\lambda_{3}=-8$.\\
+\[
+\begin{pmatrix} -5-\left(-8\right) & -4 & 2 \\ -2 & -2-\left(-8\right) & 2\\4 &2 &2-\left(-8\right) \end{pmatrix} \begin{pmatrix} x \\ y \\z \end{pmatrix}=\begin{pmatrix} 0 \\ 0 \\0 \end{pmatrix}\]\\
+\[
+\begin{pmatrix} 3 & -4 & 2 \\ -2 & 6 & 2\\4 &2 &10 \end{pmatrix} \begin{pmatrix} x \\ y \\z \end{pmatrix}=\begin{pmatrix} 0 \\ 0 \\0 \end{pmatrix}
+\]\\
+\begin{align}
+3x-4y+2z=0\\
+-2x+6y+2z=0\\
+4x+2y+10z=0
+\end{align}
+Resolving equations(4),(5)and (6) simultaneously, we shall obtain the associated eigen vectors.\\
+\begin{align*}
+\lambda_{3}=-8\quad \quad u_{3}=
+\begin{pmatrix} -2 \\ -1 \\1 \end{pmatrix}
+\end{align*}
+From the given equation;\\
+\begin{align*}
+\frac{du}{dt}&=Au\\
+\frac{du}{u}&=Adt\\
+\int \frac{du}{u}&=\int Adt\\
+\ln |u|&=At+c\\
+u&=ce^{tA}
+\end{align*}
+ Applying the initial value condition $u\left(0\right)=u_{0}$ we shall obtain;\\
+\begin{align*}
+u_{0}&=ce^{0}\\
+c&=u_{0}
+\end{align*}
+$u_{1}(t)=e^{\lambda_{1}t}u_{1}=e^{0}\begin{pmatrix} -2 \\ 3 \\1 \end{pmatrix}$\\
+$u_{2}(t)=e^{\lambda_{2}t}u_{1}=e^{3t}\begin{pmatrix} 1 \\ 6 \\16 \end{pmatrix}$\\
+$u_{3}(t)=e^{\lambda_{3}t}u_{1}=e^{-8t}\begin{pmatrix} -2 \\ -1 \\1 \end{pmatrix}$\\
+$u\left(t\right)=c_{1}e^{\lambda_{1} t}+c_{2}e^{\lambda_{2} t}+c_{3}e^{\lambda_{3} t}$\\
+$u\left(t\right)=c_{1}\begin{pmatrix} -2 \\ 3 \\1 \end{pmatrix}+c_{2}e^{3t}\begin{pmatrix} 1 \\ 6 \\16 \end{pmatrix}+c_{3}e^{-8t}\begin{pmatrix} -2 \\ -1 \\1 \end{pmatrix}$\\
+At $t=0 \quad u\left(0\right)=u_{0}$\\
+\begin{align}
+\begin{pmatrix} 2 \\ 1 \\2 \end{pmatrix}=
+\begin{pmatrix} -2 & 1 &-2 \\ 3 & 6& -1\\1 &16&1 \end{pmatrix} \begin{pmatrix} c_{1} \\ c_{2}\\c_{3} \end{pmatrix}
+\end{align}
+\begin{align}
+-2c_{1}+-c_{2}+-2c_{3}&=2\\
+3c_{1}+6c_{2}+-c_{3}&=1\\
+c_{1}+16c_{2}+c_{3}&=2
+\end{align}
+Resolving equations (11),(12)and (13) simultaneously, we shall obtain the value of the constants as;\\
+$$c_{1}=\frac{-1}{4}\quad c_{2}=\frac{2}{11}\quad c_{3}=\frac{-29}{44}$$\\
+The general solution is given as;\\
+$u\left(t\right)=\frac{-1}{4}\begin{pmatrix} -2 \\ 3 \\1 \end{pmatrix}+\frac{2}{11}e^{3t}\begin{pmatrix} 1 \\ 6 \\16 \end{pmatrix}+\frac{-29}{44}e^{-8t}\begin{pmatrix} -2 \\ -1 \\1 \end{pmatrix}$\\
+\item[(ii)]
+\begin{equation*}
+A = 
+\begin{pmatrix}
+4 & -3 & 0 \\
+3 & 4 & 0 \\
+5 & 10 & 10
+\end{pmatrix}
+\end{equation*}
+We want to determine the eigen values of the matrix $A$.\\
+\begin{equation*}
+\begin{pmatrix}
+4-\lambda & -3 & 0 \\
+3 & 4-\lambda & 0 \\
+5 & 10 & 10-\lambda
+\end{pmatrix}
+\end{equation*}
+We want to obtain the obtain the determinant the of the matrix $A$.\\
+$$\left(4-\lambda\right)\left(\left(4-\lambda\right)\left(10-\lambda\right)\right)+3\left(3\left(10-\lambda\right)\right)=0$$
+$$-\lambda^{3}+18\lambda^{2}-105\lambda+250=0$$
+$$\left(\lambda_{1}-10\right)\left(\lambda_{2}-4+3i\right)\left(\lambda_{3}-4-3i\right)$$
+$$\lambda_{1}=10\quad \lambda_{2}=4-3i\quad\lambda_{3}=4+3i$$
+Now we want to determine the eigen vectors associated with the eigen values;\\
+$\lambda_{1}=10$
+\[
+\begin{pmatrix} 4-\left(10\right) & -3 & 0 \\  3& 4-\left(10\right) & 0\\5&10 &10-\left(10\right) \end{pmatrix} \begin{pmatrix} x \\ y \\z \end{pmatrix}=\begin{pmatrix} 0 \\ 0 \\0 \end{pmatrix}\]\\
+\[
+\begin{pmatrix} -6 & -3 & 0 \\ 3 & -6 & 0\\5 &10 &0 \end{pmatrix} \begin{pmatrix} x \\ y \\z \end{pmatrix}=\begin{pmatrix} 0 \\ 0 \\0 \end{pmatrix}\]
+\begin{align}
+-6x-3y+0=0\\
+3x+6y+0=0\\
+5x+10y+0=0
+\end{align}
+Resolving equations(14),(15)and (16) simultaneously, we shall obtain the associated eigen vectors.\\
+
+\begin{align*}
+\lambda_{1}=10\quad \quad u_{1}=
+\begin{pmatrix} 0 \\ 0 \\1 \end{pmatrix}
+\end{align*}
+Similarly for $\lambda_{2}=4+3i$\\
+
+\[
+\begin{pmatrix} 4-\left(4+3i\right) & -3 & 0 \\  3& 4-\left(4+3i\right) & 0\\5&10 &10-\left(4+3i\right) \end{pmatrix} \begin{pmatrix} x \\ y \\z \end{pmatrix}=\begin{pmatrix} 0 \\ 0 \\0 \end{pmatrix}\]
+
+By resolving the above matrix, we shall obtain;
+\begin{align*}
+\lambda_{2}=4+3i\quad \quad u_{1}=
+\begin{pmatrix} 12-9i \\ -9+12i \\25 \end{pmatrix}
+\end{align*}
+
+The eigen vectors associated with the eigen value$\lambda_{3}=4-3i$ is the conjugate of the eigen vectors of  $\lambda_{2}=4+3i$\\
+\begin{align*}
+\lambda_{3}=4-3i\quad \quad u_{1}=
+\begin{pmatrix} 12+9i \\ -9-12i \\25 \end{pmatrix}
+\end{align*}
+
+$u_{1}(t)=e^{\lambda_{1}t}u_{1}=e^{10t}\begin{pmatrix} 0 \\ 0 \\1 \end{pmatrix}$\\
+$u_{2}(t)=e^{\lambda_{2}t}u_{1}=e^{4t}\left(\cos\left(3t\right)\begin{pmatrix} -12 \\ -9 \\25\end{pmatrix}-\sin\left(3t\right)\begin{pmatrix} -9 \\ 12 \\0\end{pmatrix}\right)$\\
+$u_{3}(t)=e^{\lambda_{2}t}u_{1}=e^{4t}\left(\cos\left(3t\right)\begin{pmatrix} -9 \\ 12 \\0\end{pmatrix}+\sin\left(3t\right)\begin{pmatrix} -12 \\ -9 \\25\end{pmatrix}\right)$
+
+$u(t)=c_{1}e^{\lambda_{1}t}u_{1}=e^{10t}\begin{pmatrix} 0 \\ 0 \\1 \end{pmatrix}+c_{2}e^{4t}\left(\cos\left(3t\right)\begin{pmatrix} -12 \\ -9 \\25\end{pmatrix}-\sin\left(3t\right)\begin{pmatrix} -9 \\ 12 \\0\end{pmatrix}\right)$ \\
+$+c_{3}e^{4t}\left(\cos\left(3t\right)\begin{pmatrix} -9 \\ 12 \\0\end{pmatrix}+\sin\left(3t\right)\begin{pmatrix} -12 \\ -9 \\25\end{pmatrix}\right)$\\
+At $t=0 \quad u\left(0\right)=u_{0}$
+
+\begin{align}
+\begin{pmatrix} 2 \\ 1 \\2 \end{pmatrix}=
+\begin{pmatrix} 0 & -12 &-9 \\ 0 & -9& 12\\1 &25&0 \end{pmatrix} \begin{pmatrix} c_{1} \\ c_{2}\\c_{3} \end{pmatrix}
+\end{align}
+\begin{align}
+-12c_{2}+-9c_{3}&=2\\
+-9c_{2}+12c_{3}&=1\\
+c_{1}+25c_{2}&=2
+\end{align}
+Resolving equations (18),(19)and (20) simultaneously, we shall obtain the value of the constants as;\\
+$$c_{1}=\frac{17}{3}\quad c_{2}=\frac{-11}{75}\quad c_{3}=\frac{-2}{75}$$\\
+Our general solution now becomes;\\
+$u(t)=\frac{17}{3} e^{\lambda_{1}t}u_{1}=e^{10t}\begin{pmatrix} 0 \\ 0 \\1 \end{pmatrix}+\frac{-11}{75} e^{4t}\left(\cos\left(3t\right)\begin{pmatrix} -12 \\ -9 \\25\end{pmatrix}-\sin\left(3t\right)\begin{pmatrix} -9 \\ 12 \\0\end{pmatrix}\right)$ \\
+$+\frac{-2}{75} e^{4t}\left(\cos\left(3t\right)\begin{pmatrix} -9 \\ 12 \\0\end{pmatrix}+\sin\left(3t\right)\begin{pmatrix} -12 \\ -9 \\25\end{pmatrix}\right)$\\
+\end{itemize}
+
+\section*{Question 3}
+\item[(i)]
+\begin{align*}
+\frac{du}{dt}&=Au+F\left(u,t\right)   \quad \quad on \quad  [a,b]\\
+e^{-At}\frac{du}{dt}&=e^{-At}\left(Au+F\left(u,t\right)\right)\\
+\frac{du}{dt}\left(ue^{At}\right)&=e^{-At}F\left(u,t\right)\\
+ue^{-At}|_{tn}^{t_{n+1}}&=\int\limits_{t_{n}}^{tn+1}e^{-At}F\left(u,t\right)\\
+u(t_{n+1})e^{At_{n+1}}-u(t_{n})e^{At_{n}}&=\int\limits_{t_{n}}^{tn+1}e^{-At}F\left(u,t\right)\\
+u(t_{n+1})e^{At_{n+1}}&=u(t_{n})e^{At_{n}}+\int\limits_{t_{n}}^{tn+1}e^{-At}F\left(u,t\right)\\
+\end{align*}
+Dividing through by $e^{A\left(t_{n+1}\right)}$
+\begin{align*}
+u(t_{n+1})&=u(t_{n})e^{At_{n}}e^{-At_{n+1}}+\int\limits_{t_{n}}^{tn+1}e^{At_{n+1}}e^{-At}F\left(u,t\right)\\
+u(t_{n+1})&=u(t_{n})e^{A\left(-t_{n}+t_{n+1}\right)}+\int\limits_{t_{n}}^{tn+1}e^{A\left(t_{n+1}-t_{n}\right)}F\left(u,t\right)\\
+\end{align*}
+Setting $h=t_{n+1}-t_{n}$ , $t=t_{n}+\tau$ and $\tau=t-t_{n}$ we shall obtain the desired solution.\\
+
+\begin{align*}
+u(t_{n+1})&=u(t_{n}) e^{A(-t_{n}+t_{n+1})}+\int\limits_{0}^{h}e^{-(\tau-h)A}F(u(t_{n}+\tau),t_{n}+\tau)d\tau\\
+\end{align*}
+\newpage
+
+\item[(ii)]
+.\\
+$F\left(u_{n},t_{n}\right)=F_{n}$
+\begin{align*}
+u(t_{n+1})&=u(t_{n})e^{A\left(-t_{n}+t_{n+1}\right)}+\int\limits_{0}^{h}e^{-\left(\tau-h\right)A}F\left(u\left(tn+\tau\right),t_{n}+\tau\right)d\tau\\
+&=e^{hA}u_{n}+\int\limits_{0}^{h}e^{-\left(\tau-h\right)A}F(u(t_{n}+\tau),t_{n}+\tau)d\tau\\
+&=u(t_{n})e^{hA}+\int\limits_{0}^{h}e^{-\left(\tau-h\right)A}F_{n}d\tau\\
+&=u(t_{n})e^{hA}-A^{-1}F_{n}e^{-\left(\tau-h\right)}\lvert _{0}^{h}\\
+&=u(t_{n})e^{hA}-A^{-1}F_{n}\left(I-e^{hA}\right)\\
+&=e^{hA}u(t_{n})+A^{-1}\left(e^{hA}-I\right)F_{n}
+\end{align*}
+\end{itemize}
+\end{document}
